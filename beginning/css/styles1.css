@@ -1,0 +1,105 @@
+body, textarea {
+    font-size: 16px;
+    font-family: "Open Sans", serif, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    margin: 0;
+    line-height: 1.4em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Algerian", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* .sub-menu li a {
+    font-size: 14px !important;
+}
+.sub-menu li {
+    padding: 5px 0px; 
+} */
+
+.navbar-brand img { max-width: 200px; }
+        .hero-carousel img { height: 500px; object-fit: cover; }
+        /* section { padding: 60px 0; } */
+        .btn-primary {
+            background-color: orange;
+            border-color: orange;
+            color: white;
+        }
+         .btn-primary:hover {
+            background-color: orange;
+            border-color: orange;
+            color: white;}
+        #contactBtn {
+            background-color: #90060d;
+            border-color: #90060d;
+            border-radius: 10px;
+            padding: 5px 10px;
+            color:white;
+
+        }
+        .nav-tabs {
+  background-color: #90060d; 
+  border-bottom: 2px solid white; 
+  max-width: 800px;
+  margin: 0 auto;
+}
+.newcontainer{
+         background-color: white; 
+    color: #90060d; 
+}
+
+.nav-tabs .nav-link {
+  color: white;
+  border: none; 
+  
+}
+.nav-tabs .nav-link.active {
+  color: black;
+  background-color: white; 
+  border: none;
+  /* border-bottom: 2px solid white;  */
+}
+
+
+.tab-content {
+    background-color: #90060d; 
+    border: 1px solid #90060d; 
+    border-radius: 8px; 
+    border-top:1px solid #90060d; 
+    padding: 20px; 
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+#contact{
+  background-color: lightgrey; 
+  display: flex;             
+  justify-content: center;   
+  align-items: center;     
+  text-align: center;  
+}
+.mycontainer {
+  background-color: white;  
+  display: flex;             
+  justify-content: center;   
+  align-items: center;     
+  text-align: center;  
+} 
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.card {
+    background-color: white;
+    color: black;
+    border: none;
+   align-items: center;     
+  text-align: center;  
+}
+.card p{text-align: left;}  

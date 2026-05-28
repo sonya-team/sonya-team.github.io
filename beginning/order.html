@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" sizes="180x180" href="images/favicons/apple-touch-icon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="images/favicons/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="images/favicons/favicon-16x16.png" type="image/png">
+    <title>Del Cerro Pizza & Beer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/order.js"></script>
+</head>
+<body>
+<header>
+<div class="container">
+            <a href="index.html"><img src="images/logo.png" width="80%" alt="logo"></a>
+            <input type="checkbox" class="navToggler" id="navToggler">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                      <a href="menu.html">Menu</a>
+                        <ul class="sub-menu">
+                            <li><a href="#signature-pizzas-menu">Pizzas</a></li>
+                            <li><a href="#wings">Wings</a></li>
+                            <li><a href="#soda-water">Soda/Water</a></li>
+                            <li><a href="#wine">Wine</a></li>
+                            <li><a href="#salads">Salads</a></li>
+                            <li><a href="#desserts">Desserts</a></li>
+                            <li><a href="#kids-menu">Kids(Menu)</a></li>
+                            <li><a href="#vegan-menu">Vegan(Menu)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                      <a href="gallery.html">Gallery</a>
+                        <ul class="sub-menu">
+                            <li><a href="#signature-pizzas-menu">Pizzas</a></li>
+                            <li><a href="#wings">Wings</a></li>
+                            <li><a href="#soda-water">Soda/Water</a></li>
+                            <li><a href="#wine">Wine</a></li>
+                            <li><a href="#salads">Salads</a></li>
+                            <li><a href="#desserts">Desserts</a></li>
+                            <li><a href="#kids-menu">Kids(Menu)</a></li>
+                            <li><a href="#vegan-menu">Vegan(Menu)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="community.html">Events</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                     <li><a href="contact.html" class="button">Contact</a></li>
+                </ul>
+            </nav>
+            <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                <img src="images/menu.svg" class="menuOpen" alt="menu">
+                <img src="images/x.svg" class="menuClose" alt="close">
+            </label>
+        </div>
+    </header>
+ <!-- <h2>Online order from our menu</h2> -->
+         <!-- Cart  Order-->
+    <div class="cart-section">
+        <h2> Online Order </h2>
+        <p><img src="images/shopping-cart.png"class="card-img-top w-50 mx-auto" style="height: 50px;" alt="Shopping Cart"></p>
+       
+        <div id="cart-items">Cart is empty </div>
+        <div class="cart-total">Sum: <span id="cart-total-price">0</span> $</div>
+        <button onclick="checkout()" style="width: 100%; margin-top: 15px;">Checkout/button
+    </div>
+    <!-- Cart -->
+    <div class="menu-container">
+        <!-- Cart 1 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path46.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>DEL CERRO SUPREME</h3>
+           <div class="pizza-desc">Red sauce, mozzarella cheese, cup & char
+         pepperoni, sausage, bell peppers, red onions, mushrooms
+</div>
+      <div class="price">$20</div>
+    
+            <button onclick="addToCart('DEL CERRO SUPREME', 20)">Add to Cart</button>
+        </div>
+        <!-- Cart 2 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+            <img src="images/gallery-pzza (4).png" class="card-img-top w-75 mx-auto" style="height: 180px;"  alt="MEAT MADNESS">
+            </div>
+            <h3>MEAT MADNESS</h3>
+            <div class="pizza-desc">Red sauce, mozzarella cheese, pepperoni, sausage, ham, bacon, salami, fresh basil </div>
+            <div class="price">$18</div>
+            <button onclick="addToCart('MEAT MADNESS', 18)">Add to Cart</button>
+        </div>
+        <!-- Cart 3 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+            <img src="images/gallery-pzza (17).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="CHICKEN PESTO">
+            </div>
+            <h3>CHICKEN PESTO</h3>
+            <div class="pizza-desc"> Pesto sauce, mozzarella cheese, chicken, tomato, red onion, garlic, fresh basil, fresh parmesan </div>
+            <div class="price">$18</div>
+            <button onclick="addToCart('CHICKEN PESTO', 18)">Add to Cart</button>
+        </div>
+        <!-- Cart 4 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/gallery-pzza (12).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>18” HALF & HALF SIGNATURE PIZZA </h3>
+           <div class="pizza-desc">Choose any two of our signature pizzas and enjoy them together on one 18” pie!
+</div>
+      <div class="price">$26</div>
+    
+            <button onclick="addToCart('18” HALF & HALF SIGNATURE PIZZA', 26)">Add to Cart</button>
+        </div>
+        
+                    <!-- Cart 5 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path53.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>MARGHERITA</h3>
+           <div class="pizza-desc">Red sauce, fresh mozzarella, fresh basil, sliced tomatoes,
+and a drizzle of olive oil
+
+</div>
+      <div class="price">$19</div>
+    
+            <button onclick="addToCart('MARGHERITA', 19)">Add to Cart</button>
+        </div>
+
+        
+        <!-- Cart 6 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/gallery-pzza (11).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>BARNYARD BLISS</h3>
+           <div class="pizza-desc">Mozzarella cheese, ranch, chicken, sliced tomatoes, red onion, garlic, bacon, fresh basil
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('BARNYARD BLISS', 18)">Add to Cart</button>
+        </div>
+        
+        <!-- Cart 7 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/gallery-pzza (13).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>VEGGIE DELIGHT</h3>
+           <div class="pizza-desc">Red sauce, mozzarella cheese, cup & char
+         pepperoni, sausage, bell peppers, red onions, mushrooms
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('VEGGIE DELIGHT', 18)">Add to Cart</button>
+</div>
+        
+    
+        <!-- Cart 8 -->
+        <div class="pizza-card">
+        <div class="col-md-3">
+        <img src="images/gallery-pzza (18).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>DEL CERRO’S HOT HONEY</h3>
+           <div class="pizza-desc">Hot honey, red sauce, mozzarella, cup & char pepperoni, fresh parmesan, fresh ricotta, fresh basil
+</div>
+      <div class="price">$20</div>
+    
+            <button onclick="addToCart('DEL CERRO’S HOT HONEY', 20)">Add to Cart</button>
+        </div>
+        
+        <!-- Cart 9 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path117.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>PIZZA BIANCA</h3>
+           <div class="pizza-desc">Olive oil, ricotta, mozzarella, parmesan, fresh garlic,
+fresh basil</div>
+
+      <div class="price">$19</div>
+        <button onclick="addToCart('PIZZA BIANCA', 19)">Add to Cart</button>
+        </div>
+        
+        <!-- Cart 10 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/gallery-pzza (16).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>THE FIRE BIRD</h3>
+           <div class="pizza-desc">Mozzarella cheese, ghost pepper cheese, chicken, red onions, buffalo sauce and ranch drizzle
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('THE FIRE BIRD', 18)">Add to Cart</button>
+        </div>
+
+        <!-- Cart 11 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/gallery-pzza (14).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>ALOHA PIE</h3>
+           <div class="pizza-desc">Red sauce, mozzarella cheese, cup & char
+         pepperoni, sausage, bell peppers, red onions, mushrooms
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('ALOHA PIE', 18)">Add to Cart</button>
+        </div>
+
+        <!-- Cart 12 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/gallery-pzza (19).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>POPEYE THE SAILOR</h3>
+           <div class="pizza-desc">Olive oil, spinach, mozzarella cheese, ricotta, garlic, artichoke hearts
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('POPEYE THE SAILOR', 18)">Add to Cart</button>
+        </div>
+
+        <!-- Cart 13 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path124.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>PESTO INFERNO</h3>
+           <div class="pizza-desc">Pesto, mozzarella cheese, cup & char pepperoni, mushrooms, mikes hot honey, fresh basil, parmesan, crushed red pepper
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('PESTO INFERNO', 18)">Add to Cart</button>
+        </div>
+        
+        <!-- Cart 14 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/gallery-pzza (20).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>THE GODFATHER</h3>
+           <div class="pizza-desc">Red sauce, mozzarella cheese, meatballs, mushroom, onion, ricotta, tomato, garlic, fresh basil
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('THE GODFATHER', 18)">Add to Cart</button>
+        </div>
+
+        <!-- Cart 15-->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/Own Pizza.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>BUILD YOUR OWN PIZZA</h3>
+           <div class="pizza-desc">Choose your size, sauce, cheese, and toppings to create your perfect pizza!
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('BUILD YOUR OWN PIZZA', 18)">Add to Cart</button>
+        </div>
+        
+        <!-- Cart 16-->
+        <div class="pizza-card">
+            <div class="col-md-3">
+    <img src="images/gallery-pzza (21).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>CAESAR</h3>
+           <div class="pizza-desc">Chopped romaine lettuce, crunchy croutons, shaved parmesan, caesar dressing</div>
+      <div class="price">$11</div>
+            <button onclick="addToCart('CAESAR', 11)">Add to Cart</button>
+        </div>
+        
+        <!-- Cart 17 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+        <img src="images/gallery-pzza (2).png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+        </div>
+           <h3>GARDEN SALAD</h3>
+           <div class="pizza-desc"> Chopped romaine lettuce, fresh tomatoes, red onions, green bell peppers, black olives, ranch dressing
+</div>
+      <div class="price">$9</div>
+    
+            <button onclick="addToCart('GARDEN SALAD', 9)">Add to Cart</button>
+        </div>
+        <!-- Cart 18-->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path195.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>ANTIPASTO SALAD</h3>
+           <div class="pizza-desc">Chopped romaine lettuce, fresh tomatoes, red onions, pepperoni, ham, salami, mozzarella cheese, black olives, Italian dressing
+</div>
+      <div class="price">$13</div>
+    
+            <button onclick="addToCart('ANTIPASTO SALAD', 13)">Add to Cart</button>
+        </div>
+         
+       
+        <!-- Cart 19 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path145.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>GARLIC KNOTS</h3>
+           <div class="pizza-desc">W/ marinara sauce
+</div>
+      <div class="price">$10</div>
+    
+            <button onclick="addToCart('GARLIC KNOTS', 10)">Add to Cart</button>
+        </div>
+
+        <!-- Cart 20 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/gallery-pzza.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>WINGS</h3>
+           <div class="pizza-desc">Buffalo/ bbq/ lemon parmesan/ cajun dry rub/ spicy peach/ plain
+</div>
+      <div class="price">$13</div>
+    
+            <button onclick="addToCart('WINGS', 13)">Add to Cart</button>
+        </div>
+        
+        <!-- Cart 21 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path173.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>MOZZARELLA STICKS</h3>
+           <div class="pizza-desc">W/ marinara sauce
+</div>
+      <div class="price">$18</div>
+    
+            <button onclick="addToCart('MOZZARELLA STICKS', 18)">Add to Cart</button>
+        </div>
+
+        <!-- Cart 22 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path138.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>FRIED RAVIOLI</h3>
+           <div class="pizza-desc">W/ marinara sauce
+</div>
+      <div class="price">$14</div>
+    
+            <button onclick="addToCart('FRIED RAVIOLI', 14)">Add to Cart</button>
+        </div>
+
+       
+        <!-- Cart 23 -->
+        <div class="pizza-card">
+            <div class="col-md-3">
+                        <img src="images/path152.png" class="card-img-top w-75 mx-auto" style="height: 180px;" alt="Pizza Bianca">
+                    </div>
+           <h3>JALAPENO POPPERS</h3>
+           <div class="pizza-desc">W/ ranch
+</div>
+      <div class="price">$12</div>
+            <button onclick="addToCart('DEL CERRO SUPREME', 12)">Add to Cart</button>
+        </div>
+</body>
+</html>

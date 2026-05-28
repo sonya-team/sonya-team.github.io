@@ -1,0 +1,94 @@
+
+h2{
+    text-align: center;
+    color: #d00;
+}
+body, textarea {
+    font-size: 16px;
+    font-family: "Algerian", serif, "open sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    margin: 0;
+    line-height: 1.4em;
+}
+/* h1, h2, h3, h4, h5, h6 {
+    font-family: "Algerian", serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+h1, h2{
+    font-family: "Algerian", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#contact {
+    background-color: lightgrey;;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+ .pizza-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 30px; /* Space between the two columns */
+  max-width: 1200px;
+  margin: 0 auto;
+    background-color: #efefef;
+    padding: 20px 0;
+ }
+.pizza-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 30px; /* Space between the two columns */
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.pizza-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between individual pizza items */
+}
+
+.pizza-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.pizza-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.pizza-price {
+  font-weight: bold;
+  color: #d00;;
+  white-space: nowrap;
+}
+
+.pizza-desc {
+  font-size: 0.9rem;
+  color: #053106;
+  margin-top: 5px;
+}
+
+/* footer > div {
+    display: flex;
+    justify-content: center;
+} */
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .pizza-menu {
+    grid-template-columns: 1fr;
+  }
+  }
+/* }
+/* .pizza-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
